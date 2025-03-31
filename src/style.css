@@ -1,0 +1,69 @@
+@import './assets/Fonts.css';
+@import "tailwindcss";
+
+@theme{
+    --font-sans: "DM Sans";
+    --color-black-100: #000;
+    --color-gray-100:#dfdfdf;
+    --color-white-100:#fff;
+    --color-accent-100:linear-gradient(#FFC593, #BC7198, #5A77FF);
+}
+@layer components {
+    .heading-xl {
+        font-size: 40px;
+        line-height: 48px;
+        letter-spacing: 4.17px;
+        font-weight: bold;
+    }
+    .heading-lg {
+        font-size: 24px;
+        line-height: 25px;
+    }
+    .heading-md {
+        font-size: 18px;
+        line-height: 25px;
+    }
+    .heading-sm {
+        font-size: 12px;
+        line-height: 16px;
+        letter-spacing: 2px;
+    }
+
+    .button-full {
+        background-color: var(--color-black-100);
+        color:var(--color-white-100);
+        padding: 0.5rem 1rem;
+        cursor: pointer;
+        transition: all 0.3s;
+        text-transform: uppercase;
+    }
+    .button-full:hover{
+        background-color:var(--color-gray-100);
+        color:var(--color-black-100);
+    }
+    .button-underline{
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        text-transform: uppercase;
+    }
+    .button-underline img{
+        transform: translateX(0.5rem);
+        transition: all 0.5s;
+    }
+    .button-underline:hover img{
+        transform: translateX(0);
+    }
+    .button-underline .text{
+        transition: all 0.5s;
+    }
+    .button-underline:hover .text{
+        text-decoration: underline;
+    }
+
+}
+
+html, body{
+ font-family: var(--font-sans);   
+ font-weight: normal;
+}

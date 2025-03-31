@@ -2,7 +2,7 @@
 const Start = () => {
   return (
     <div>
-      Start
+      Start!
     </div>
   )
 }

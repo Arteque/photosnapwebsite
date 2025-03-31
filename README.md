@@ -1,12 +1,65 @@
-# React + Vite
+# Frontend Mentor Challenge - Multi-Page Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a solution to a challenge proposed by [Frontend Mentor](https://www.frontendmentor.io/). The goal of this project is to build a responsive multi-page website that matches the provided design as closely as possible.
 
-Currently, two official plugins are available:
+## Table of Contents
+- [Overview](#overview)
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Overview
+This project involves building a multi-page website that provides an optimal layout for different screen sizes and includes hover states for interactive elements. The challenge allows using any tools and technologies to accomplish the goal.
 
-## Expanding the ESLint configuration
+## Features
+- Responsive design adapting to different screen sizes
+- Hover states for all interactive elements
+- Modern UI built with React and CSS
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Technologies Used
+- React.js
+- React Router for multi-page navigation
+- Styled Components / Tailwind CSS / SCSS (choose one based on preference)
+- Vite / Create React App for project setup
+
+## Installation
+To set up the project locally, follow these steps:
+
+1. Clone this repository:
+   ```sh
+   git clone https://github.com/your-username/frontend-mentor-multipage.git
+   ```
+2. Navigate to the project folder:
+   ```sh
+   cd frontend-mentor-multipage
+   ```
+3. Install dependencies:
+   ```sh
+   npm install
+   ```
+4. Start the development server:
+   ```sh
+   npm run dev
+   ```
+   or if using Create React App:
+   ```sh
+   npm start
+   ```
+
+## Usage
+- Open `http://localhost:5173/` (or `http://localhost:3000/` for CRA) in your browser to view the project.
+- Resize the window to test responsive behavior.
+- Hover over interactive elements to see hover states.
+
+## Contributing
+Contributions are welcome! To contribute:
+1. Fork the repository.
+2. Create a new branch (`feature/your-feature`).
+3. Commit your changes.
+4. Push to your branch and create a pull request.
+
+## License
+This project is licensed under the MIT License.

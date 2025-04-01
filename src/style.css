@@ -28,7 +28,17 @@
         line-height: 16px;
         letter-spacing: 2px;
     }
-
+    p{
+        font-size: 15px;
+        line-height: 25px;
+        font-weight: normal;
+    }
+    a{
+        transition:all 0.3s;
+    }
+    a:hover{
+        color: var(--color-gray-100);
+    }
     .button-full {
         background-color: var(--color-black-100);
         color:var(--color-white-100);
@@ -41,18 +51,24 @@
         background-color:var(--color-gray-100);
         color:var(--color-black-100);
     }
+    .button-full.button-on-dark{
+        background: var(--color-white-100);
+        color: var(--clr-black-100);
+    }
+    .button-full.button-on-dark:hover{
+        background: var(--color-gray-100);
+    }
     .button-underline{
         display: flex;
         align-items: center;
         gap: 0.5rem;
         text-transform: uppercase;
     }
-    .button-underline img{
-        transform: translateX(0.5rem);
-        transition: all 0.5s;
+    .button-underline.button-underline-on-dark .text{
+        color: var(--color-white-100);
     }
-    .button-underline:hover img{
-        transform: translateX(0);
+    .button-underline.button-underline-on-dark  img{
+        filter: invert();
     }
     .button-underline .text{
         transition: all 0.5s;
@@ -60,10 +76,14 @@
     .button-underline:hover .text{
         text-decoration: underline;
     }
-
+    body[data-menu="open"] .navs{
+        opacity: 1 !important;
+        pointer-events: auto !important;
+    }
 }
 
 html, body{
  font-family: var(--font-sans);   
  font-weight: normal;
 }
+

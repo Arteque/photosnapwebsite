@@ -76,9 +76,23 @@
     .button-underline:hover .text{
         text-decoration: underline;
     }
-    body[data-menu="open"] .navs{
-        opacity: 1 !important;
-        pointer-events: auto !important;
+    body::after{
+        content:"";
+        position: absolute;
+        inset: 0;
+        background-color: var(--color-black-100);
+        opacity: 0;
+        pointer-events: none;
+        transition: all 0.3s;
+    }
+    body[data-menu='open']::after{
+        opacity: 0.8;
+    }
+    @media (min-width:768px){
+        body[data-menu='open']::after, body::after{
+            opacity: 0;
+            pointer-events: none;
+        }
     }
 }
 

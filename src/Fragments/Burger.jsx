@@ -1,13 +1,7 @@
 import { useEffect, useState } from "react";
 
-const Burger = () => {
-  // State to track whether the menu is open or closed
-  const [menuState, setMenuState] = useState(false);
-
-  // Function to toggle the menu state
-  const burgerMenuHandler = () => {
-    setMenuState((prev) => !prev);
-  };
+const Burger = ({menuState, burgerMenuHandler}) => {
+ 
 
   // Effect to update the document body dataset when menu state changes
   useEffect(() => {
@@ -15,7 +9,7 @@ const Burger = () => {
   }, [menuState]);
 
   return (
-    <button onClick={burgerMenuHandler} className="cursor-pointer w-[50px] h-[50px] flex items-center justify-center">
+    <button onClick={burgerMenuHandler} className="cursor-pointer w-[50px] h-[50px] flex items-center justify-center md:hidden">
       {/* Show the menu icon when menu is closed */}
       {!menuState && (
         <img src="./shared/mobile/menu.svg" alt="Open the Menu icon" />

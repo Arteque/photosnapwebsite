@@ -10,10 +10,12 @@
 }
 @layer components {
     .heading-xl {
-        font-size: 40px;
+        font-size: 32px;
         line-height: 48px;
         letter-spacing: 4.17px;
         font-weight: bold;
+        text-transform: uppercase;
+        margin-block-end: 1rem;
     }
     .heading-lg {
         font-size: 24px;

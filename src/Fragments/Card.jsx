@@ -7,11 +7,10 @@ const Card = ({dark, bgmedia, imgurldesktop, imgurltablet, imgurlmobile, childre
                 <img src={imgurlmobile} className="block w-full h-full max-h-[650px] object-cover"/>
             </picture>
         ) : (
-            <div 
-        className={`${dark ? 'bg-black-100' : 'bg-white-100'} px-[24px] py-[72px] ${classname ? classname : null}`}
-    >{children}</div>
+            <div className={`${dark ? 'bg-black-100' : 'bg-white-100'} px-[24px] py-[72px] ${classname ? classname : null}`}>
+                {children}
+            </div>
         )
   )
 }
- 
 export default Card

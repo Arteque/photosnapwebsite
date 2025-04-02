@@ -9,10 +9,11 @@ const Start = () => {
     <div>
       <CardContainer reverse={true}>
         <Card
+          classname="min-h-[375px] lg:min-h-[650px] md:basis-1/2 lg:basis-2/2"
           bgmedia={true}
-          imgurlmobile="/home/mobile/create-and-share.jpg"
-          imgurltablet="/home/tablet/create-and-share.jpg"
-          imgurldesktop="/home/desktop/create-and-share.jpg"
+          imgurlmobile="bg-[url(./home/mobile/create-and-share.jpg)]"
+          imgurltablet="md:bg-url[url(./home/tablet/create-and-share.jpg)]"
+          imgurldesktop="lg:bg-[url(./home/desktop/create-and-share.jpg)]"
         />
         <Card dark={true} bgmedia={false}>
           <HeaderBig dark={false}>
@@ -32,12 +33,13 @@ const Start = () => {
 
       <CardContainer reverse={false}>
         <Card
+          classname="min-h-[375px] lg:min-h-[600px] md:basis-1/2 lg:basis-2/2"
           bgmedia={true}
-          imgurlmobile="/home/mobile/beautiful-stories.jpg"
-          imgurltablet="/home/tablet/beautiful-stories.jpg"
-          imgurldesktop="/home/desktop/beautiful-stories.jpg"
+          imgurlmobile="bg-[url(./home/mobile/beautiful-stories.jpg)]"
+          imgurltablet="md:bg-[url(./home/tablet/beautiful-stories.jpg)]"
+          imgurldesktop="lg:bg-[url(./home/desktop/beautiful-stories.jpg)]"
         />
-        <Card dark={false} bgmedia={false} classname="md:basis-2/1">
+        <Card dark={false} bgmedia={false}>
           <HeaderBig dark={true}>Beautifull stories evry time</HeaderBig>
           <Paragraph dark={false}>
             We provide design templates to ensure your stories look terrific.
@@ -53,13 +55,14 @@ const Start = () => {
 
       <CardContainer reverse={true}>
         <Card
+          classname="min-h-[375px] lg:min-h-[600px] md:basis-1/2 lg:basis-2/2"
           bgmedia={true}
-          imgurlmobile="/home/mobile/designed-for-everyone.jpg"
-          imgurltablet="/home/tablet/designed-for-everyone.jpg"
-          imgurldesktop="/home/desktop/designed-for-everyone.jpg"
+          imgurlmobile="bg-[url(./home/mobile/designed-for-everyone.jpg)]"
+          imgurltablet="md:bg-[url(/home/tablet/designed-for-everyone.jpg)]"
+          imgurldesktop="lg:bg-[url(./home/desktop/designed-for-everyone.jpg)]"
         />
-        <Card dark={true} bgmedia={false} classname="md:basis-2/1">
-          <HeaderBig dark={false}>Designed for evryone</HeaderBig>
+        <Card dark={true} bgmedia={false}>
+          <HeaderBig dark={false}>Designed for everyone</HeaderBig>
           <Paragraph dark={true}>
             Photosnap can help you create stories that resonate with your
             audience. Our tool is designed for photographers of all levels,

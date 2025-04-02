@@ -15,7 +15,7 @@ const Header = () => {
 
   return (
     <header className="main-header relative z-[999] bg-white-100">
-      <div className="container mx-auto py-[28px] px-[26px] md:flex md:justify-between md:items-center">
+      <div className="container mx-auto py-[28px] px-[26px] md:flex md:justify-between md:items-center md:py-[1rem]">
         <div className="logo-burger flex justify-between items-center md:w-fit">
           <div className="logo">
             <Link to="/">

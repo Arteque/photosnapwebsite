@@ -1,14 +1,16 @@
-const CardIcon = () => {
+import Paragraph from "./Paragraph"
+
+const CardIcon = ({icon, title, text, ...props}) => {
   return (
-    <div>
+    <div className="max-w-[350px] text-center" {...props}>
         <div className="header">
-            <img src="/features/desktop/responsive.svg" alt="Laptop, tablet and mobile device" />
+            <img src={icon} alt={title} className="mx-auto"/>
         </div>
         <div className="body">
-            <h2>100% Responsive</h2>
-            <p>
-            No matter which the device you’re on, our site is fully responsive and stories look beautiful on any screen.
-            </p>
+            <h2 className="heading-md font-bold">{title}</h2>
+            <Paragraph dark={false}>
+              {text}
+            </Paragraph>
         </div>
     </div>
   )

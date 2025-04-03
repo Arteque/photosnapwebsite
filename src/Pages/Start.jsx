@@ -1,14 +1,20 @@
+import { useState } from "react";
+
 import Button from "../Fragments/Button";
 import Card from "../Fragments/Card";
 import CardContainer from "../Fragments/CardContainer";
 import CardFullImg from "../Fragments/CardFullImg";
 import HeaderBig from "../Fragments/HeaderBig";
 import Paragraph from "../Fragments/Paragraph";
-import Stories from "../Data/Stories.json";
-import { useState } from "react";
 import CardIcon from "../Fragments/CardIcon";
+
+
+import Stories from "../Data/Stories.json";
+import Features from '../Data/Features.json'
+
 const Start = () => {
   const [stories, setstories] = useState(Stories);
+  const [features, setFeatures] = useState(Features)
   const maxData = 4
   return (
     <div>
@@ -123,7 +129,17 @@ const Start = () => {
           ))}
       </div>
       <div>
-        <CardIcon />
+        {
+          features && (
+             features.map((feature, index) => (
+               <CardIcon 
+               icon={feature.icon}
+               title={feature.title}
+               text={feature.text}
+               key={feature.id}/>
+             ))
+          )
+        }
       </div>
     </div>
   );

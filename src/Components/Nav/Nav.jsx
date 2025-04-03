@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Button from "../../Fragments/Button";
 
 export const Nav = () => {
   return (
@@ -18,7 +19,7 @@ export const Nav = () => {
         </ul>
       </nav>
       <div className="featured">
-        <button className="text-[15px] button-full font-bold block w-full py-[14px] md:text-[12px] md:px-[24px] md:tracking-[2px]">Get an invite</button>
+        <Button  classname="block w-full" btntype="full" btntext="Get an invite" to="#" title="Get an invite" />
       </div>
     </>
   );

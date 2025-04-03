@@ -15,7 +15,7 @@ const Card = ({
     <div
       className={`${
         dark ? "bg-black-100" : "bg-white-100"
-      } px-[24px] py-[72px] flex flex-col justify-center ${
+      } px-[24px] py-[92px] flex flex-col justify-center ${
         classname ? classname : null
       }`}
     >

@@ -25,7 +25,7 @@ const Header = () => {
         py-[32px] absolute left-0 right-0 transition-all duration-500 bg-white-100 text-center px-[33px]
         md:py-0 md:relative md:translate-0 md:w-full md:bg-transparent md:text-left md:opacity-100 md:pointer-events-auto md:flex md:justify-between md:items-center
         `} >
-            <Nav/>
+            <Nav location="header" />
         </div>
       </Container>
     </header>

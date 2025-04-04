@@ -1,11 +1,11 @@
 import Socials from "../Data/Socials.json"
 import { Link } from "react-router-dom"
 import { useState } from "react"
-const Social = () => {
+const Social = ({classname}) => {
 
     const [socials, setSocials] = useState(Socials)
   return (
-    <ul className="flex gap-4">
+    <ul className={`flex gap-4 ${classname}`}>
         {
             socials && (
                 socials.map((item, index) => (

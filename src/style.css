@@ -63,7 +63,7 @@
     .button-underline{
         display: flex;
         align-items: center;
-        gap: 0.5rem;
+        gap: 1rem;
         text-transform: uppercase;
     }
     .button-underline.button-underline-on-dark .text{

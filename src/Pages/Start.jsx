@@ -8,14 +8,13 @@ import HeaderBig from "../Fragments/HeaderBig";
 import Paragraph from "../Fragments/Paragraph";
 import CardIcon from "../Fragments/CardIcon";
 
-
 import Stories from "../Data/Stories.json";
-import Features from '../Data/Features.json'
+import Features from "../Data/Features.json";
 
 const Start = () => {
   const [stories, setstories] = useState(Stories);
-  const [features, setFeatures] = useState(Features)
-  const maxData = 4
+  const [features, setFeatures] = useState(Features);
+  const maxData = 4;
   return (
     <div>
       <CardContainer classname="bg-black-100">
@@ -128,18 +127,22 @@ const Start = () => {
             />
           ))}
       </div>
-      <div>
-        {
-          features && (
-             features.map((feature, index) => (
-               <CardIcon 
-               icon={feature.icon}
-               title={feature.title}
-               text={feature.text}
-               key={feature.id}/>
-             ))
-          )
-        }
+      <div className="my-[80px] grid grid-cols-[1fr_repeat(1,_calc(_min(100%-40px,60rem)/1))1fr] justify-items-center gap-y-[50px] 
+      md:grid-cols-[1fr_repeat(4,_calc(min(100%-80px,1400px)/4))1fr] md:gap-[11px]
+      lg:flex lg:gap-[1rem] lg:justify-center
+      ">
+        {features &&
+          features.map((feature, index) => (
+            <CardIcon
+              icon={feature.icon}
+              title={feature.title}
+              text={feature.text}
+              key={feature.id}
+              classname={`col-start-2 col-span-1 ${(index%2===0)?'md:col-start-2 md:col-span-2':'md:col-start-4 md:col-span-2'}
+               ${index>2?'lg:hidden':null}
+              `}
+            />
+          ))}
       </div>
     </div>
   );

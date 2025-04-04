@@ -1,0 +1,37 @@
+[
+    {
+        "id":1,
+        "title":"Facebook",
+        "url":"#",
+        "icon":"/shared/desktop/facebook.svg",
+        "bg":"linear-gradient(to top-right, #63AFDB 0%, #6028F1 100%)"
+    },
+    {
+        "id":2,
+        "title":"Youtube",
+        "url":"#",
+        "icon":"/shared/desktop/youtube.svg",
+        "bg":"linear-gradient(to top-right, #D3205A 0%, #FF5A5A 100%)"
+    },
+    {
+        "id":3,
+        "title":"Twitter",
+        "url":"#",
+        "icon":"/shared/desktop/twitter.svg",
+        "bg":"linear-gradient(to top-right, #65FFEB 0%, #27718A 100%)"
+    },
+    {
+        "id":4,
+        "title":"Pinterest",
+        "url":"#",
+        "icon":"/shared/desktop/pinterest.svg",
+        "bg":"linear-gradient(to top-right, #F6C683 0%, #DE3838 100%)"
+    },
+    {
+        "id":5,
+        "title":"Instagram",
+        "url":"#",
+        "icon":"/shared/desktop/instagram.svg",
+        "bg":"linear-gradient(to top-right, #FFC593 0%, #BC7198 50%,#5A77FF 100%)"
+    }
+]

@@ -80,7 +80,7 @@
     }
     body::after{
         content:"";
-        position: absolute;
+        position: fixed;
         inset: 0;
         background-color: var(--color-black-100);
         opacity: 0;
@@ -89,6 +89,9 @@
     }
     body[data-menu='open']::after{
         opacity: 0.8;
+    }
+    body:not(body[data-menu='close']){
+        overflow-y: hidden;
     }
     @media (min-width:768px){
         body[data-menu='open']::after, body::after{
@@ -102,5 +105,6 @@
 html, body{
  font-family: var(--font-sans);   
  font-weight: normal;
+ scroll-behavior: smooth;
 }
 

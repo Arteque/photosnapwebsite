@@ -2,7 +2,8 @@ import { Link } from "react-router-dom";
 import Burger from "../Fragments/Burger";
 import { Nav } from "./Nav/Nav";
 import { useState } from "react";
-
+import Logo from "../Fragments/Logo";
+import Container from "../Fragments/Container";
 const Header = () => {
 
    // State to track whether the menu is open or closed
@@ -15,13 +16,9 @@ const Header = () => {
 
   return (
     <header className="main-header sticky top-0 z-[999] bg-white-100">
-      <div className="container max-w-[1110px] mx-auto py-[0.688rem] px-[26px] md:flex md:justify-between md:items-center md:py-[1rem]">
+      <Container classname="py-[0.688rem] px-[26px] md:flex md:justify-between md:items-center md:py-[1rem]">
         <div className="logo-burger flex justify-between items-center md:w-fit">
-          <div className="logo">
-            <Link to="/">
-              <img src="./shared/desktop/logo.svg" alt="Photosnap Logo" />
-            </Link>
-          </div>
+          <Logo />
           <Burger menuState={menuStatus} burgerMenuHandler={burgerHandler}/>
         </div>
         <div className={`${menuStatus ? ' opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none translate-y-3.5'} 
@@ -30,7 +27,7 @@ const Header = () => {
         `} >
             <Nav/>
         </div>
-      </div>
+      </Container>
     </header>
   );
 };

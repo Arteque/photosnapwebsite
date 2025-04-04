@@ -1,9 +1,8 @@
+import Page from "../Components/Page"
 
 const Pricing = () => {
   return (
-    <div>
-      Pricing
-    </div>
+    <Page />
   )
 }
 

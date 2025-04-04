@@ -21,9 +21,9 @@ const Start = () => {
         <Card
           classname="min-h-[375px] lg:min-h-screen col-start-1 col-end-[-1] row-start-1  md:col-start-6 md:col-end-[-1]"
           bgmedia={true}
-          imgurlmobile="bg-[url(./home/mobile/create-and-share.jpg)]"
-          imgurltablet="md:bg-url[url(./home/tablet/create-and-share.jpg)]"
-          imgurldesktop="lg:bg-[url(./home/desktop/create-and-share.jpg)]"
+          imgurlmobile="bg-[url(/home/mobile/create-and-share.jpg)]"
+          imgurltablet="md:bg-url[url(/home/tablet/create-and-share.jpg)]"
+          imgurldesktop="lg:bg-[url(/home/desktop/create-and-share.jpg)]"
         />
         <Card
           dark={true}
@@ -51,9 +51,9 @@ const Start = () => {
         <Card
           classname="min-h-[375px] lg:min-h-screen col-start-1 col-end-[-1] row-start-1 md:col-start-1 md:col-end-4 lg:col-end-6"
           bgmedia={true}
-          imgurlmobile="bg-[url(./home/mobile/beautiful-stories.jpg)]"
-          imgurltablet="md:bg-[url(./home/tablet/beautiful-stories.jpg)]"
-          imgurldesktop="lg:bg-[url(./home/desktop/beautiful-stories.jpg)]"
+          imgurlmobile="bg-[url(/home/mobile/beautiful-stories.jpg)]"
+          imgurltablet="md:bg-[url(/home/tablet/beautiful-stories.jpg)]"
+          imgurldesktop="lg:bg-[url(/home/desktop/beautiful-stories.jpg)]"
         />
         <Card
           dark={false}
@@ -79,9 +79,9 @@ const Start = () => {
         <Card
           classname="min-h-[375px] lg:min-h-screen col-start-1 col-end-[-1] row-start-1  md:col-start-6 md:col-end-[-1]"
           bgmedia={true}
-          imgurlmobile="bg-[url(./home/mobile/designed-for-everyone.jpg)]"
+          imgurlmobile="bg-[url(/home/mobile/designed-for-everyone.jpg)]"
           imgurltablet="md:bg-[url(/home/tablet/designed-for-everyone.jpg)]"
-          imgurldesktop="lg:bg-[url(./home/desktop/designed-for-everyone.jpg)]"
+          imgurldesktop="lg:bg-[url(/home/desktop/designed-for-everyone.jpg)]"
         />
         <Card
           dark={true}
@@ -106,31 +106,36 @@ const Start = () => {
       <div className="grid grid-cols-[1fr_repeat(2,calc(min(100%-40px,60rem)/2))1fr] lg:grid-cols-[repeat(12,1fr)]">
         {stories &&
           stories.length > 0 &&
-          stories.map((story, index) => (
-            <CardFullImg
-              imgmobile={story.imgs.mobile}
-              imgtablet={story.imgs.tablet}
-              imgdesktop={story.imgs.desktop}
-              imgalt={story.title}
-              btntext="Read Story"
-              imgtitle={story.title}
-              imgautor={story.autor}
-              to={story.url}
-              key={story.id}
-              classname={`col-start-1 col-end-[-1] ${
-                index % 2 !== 1
-                  ? "md:col-start-1 md:col-end-3"
-                  : "md:col-start-3 md:col-end-[-1]"
-              }
-              lg:col-start-auto lg:col-span-3
-              `}
-            />
-          ))}
+          stories.map(
+            (story, index) =>
+              index < maxData && (
+                <CardFullImg
+                  imgmobile={story.imgs.mobile}
+                  imgtablet={story.imgs.tablet}
+                  imgdesktop={story.imgs.desktop}
+                  imgalt={story.title}
+                  btntext="Read Story"
+                  imgtitle={story.title}
+                  imgautor={story.autor}
+                  to={story.url}
+                  key={story.id}
+                  classname={`col-start-1 col-end-[-1] ${
+                    index % 2 !== 1
+                      ? "md:col-start-1 md:col-end-3"
+                      : "md:col-start-3 md:col-end-[-1]"
+                  }
+                  lg:col-start-auto lg:col-span-3
+                  `}
+                />
+              )
+          )}
       </div>
-      <div className="my-[80px] grid grid-cols-[1fr_repeat(1,_calc(_min(100%-40px,60rem)/1))1fr] justify-items-center gap-y-[50px] 
+      <div
+        className="my-[80px] grid grid-cols-[1fr_repeat(1,_calc(_min(100%-40px,60rem)/1))1fr] justify-items-center gap-y-[50px] 
       md:grid-cols-[1fr_repeat(4,_calc(min(100%-80px,1400px)/4))1fr] md:gap-[11px]
       lg:flex lg:gap-[1rem] lg:justify-center
-      ">
+      "
+      >
         {features &&
           features.map((feature, index) => (
             <CardIcon
@@ -138,8 +143,12 @@ const Start = () => {
               title={feature.title}
               text={feature.text}
               key={feature.id}
-              classname={`col-start-2 col-span-1 ${(index%2===0)?'md:col-start-2 md:col-span-2':'md:col-start-4 md:col-span-2'}
-               ${index>2?'lg:hidden':null}
+              classname={`col-start-2 col-span-1 ${
+                index % 2 === 0
+                  ? "md:col-start-2 md:col-span-2"
+                  : "md:col-start-4 md:col-span-2"
+              }
+               ${index > 2 ? "lg:hidden" : null}
               `}
             />
           ))}

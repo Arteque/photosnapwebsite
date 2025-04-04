@@ -1,9 +1,7 @@
-
+import Page from "../Components/Page"
 const Features = () => {
   return (
-    <div>
-        Features
-    </div>
+    <Page />
   )
 }
 

@@ -19,7 +19,9 @@ const Start = () => {
     <div>
       <CardContainer classname="bg-black-100">
         <Card
-          classname="min-h-[375px] lg:min-h-screen col-start-1 col-end-[-1] row-start-1  md:col-start-6 md:col-end-[-1]"
+          classname="min-h-[375px] lg:min-h-[650px] col-start-1 col-end-[-1] row-start-1  md:col-start-6 md:col-end-[-1]
+          lg:col-start-6
+          "
           bgmedia={true}
           imgurlmobile="bg-[url(/home/mobile/create-and-share.jpg)]"
           imgurltablet="md:bg-url[url(/home/tablet/create-and-share.jpg)]"
@@ -49,7 +51,7 @@ const Start = () => {
 
       <CardContainer>
         <Card
-          classname="min-h-[375px] lg:min-h-screen col-start-1 col-end-[-1] row-start-1 md:col-start-1 md:col-end-4 lg:col-end-6"
+          classname="min-h-[375px] lg:min-h-[600px] col-start-1 col-end-[-1] row-start-1 md:col-start-1 md:col-end-4 lg:col-end-7"
           bgmedia={true}
           imgurlmobile="bg-[url(/home/mobile/beautiful-stories.jpg)]"
           imgurltablet="md:bg-[url(/home/tablet/beautiful-stories.jpg)]"
@@ -58,7 +60,7 @@ const Start = () => {
         <Card
           dark={false}
           bgmedia={false}
-          classname="col-start-1 col-end-[-1] md:col-start-4 md:col-end-[-2] lg:col-start-7 lg:col-end-11 max-w-[350px]"
+          classname="col-start-1 col-end-[-1] md:col-start-4 md:col-end-[-2] lg:col-start-8 lg:col-end-11 max-w-[350px]"
         >
           <HeaderBig dark={true}>Beautifull stories evry time</HeaderBig>
           <Paragraph dark={false}>
@@ -77,7 +79,9 @@ const Start = () => {
 
       <CardContainer classname="bg-black-100">
         <Card
-          classname="min-h-[375px] lg:min-h-screen col-start-1 col-end-[-1] row-start-1  md:col-start-6 md:col-end-[-1]"
+          classname="min-h-[375px] lg:min-h-[650px] col-start-1 col-end-[-1] row-start-1  md:col-start-6 md:col-end-[-1]
+          lg:col-start-6
+          "
           bgmedia={true}
           imgurlmobile="bg-[url(/home/mobile/designed-for-everyone.jpg)]"
           imgurltablet="md:bg-[url(/home/tablet/designed-for-everyone.jpg)]"
@@ -86,7 +90,7 @@ const Start = () => {
         <Card
           dark={true}
           bgmedia={false}
-          classname="col-start-1 col-end-[-1] md:col-start-2 md:col-end-6  max-w-[387px]"
+          classname="col-start-1 col-end-[-1] md:col-start-2 md:col-end-6 lg:col-end-6  max-w-[450px]"
         >
           <HeaderBig dark={false}>Designed for everyone</HeaderBig>
           <Paragraph dark={true}>
@@ -130,8 +134,7 @@ const Start = () => {
               )
           )}
       </div>
-      <div
-        className="my-[80px] grid grid-cols-[1fr_repeat(1,_calc(_min(100%-40px,60rem)/1))1fr] justify-items-center gap-y-[50px] 
+      <div className="my-[80px] grid grid-cols-[1fr_repeat(1,_calc(_min(100%-40px,60rem)/1))1fr] justify-items-center gap-y-[50px] 
       md:grid-cols-[1fr_repeat(4,_calc(min(100%-80px,1400px)/4))1fr] md:gap-[11px]
       lg:flex lg:gap-[1rem] lg:justify-center
       "

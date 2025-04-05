@@ -1,0 +1,29 @@
+[
+    {
+        "id":1,
+        "title":"Basic",
+        "price":{
+            "month":"19",
+            "year":"190"
+        },
+        "text":"Includes basic usage of our platform. Recommended for new and aspiring photographers."
+    },
+    {
+        "id":2,
+        "title":"Pro",
+        "price":{
+            "month":"39",
+            "year":"390"
+        },
+        "text":"More advanced features available. Recommended for photography veterans and professionals."
+    },
+    {
+        "id":3,
+        "title":"Business",
+        "price":{
+            "month":"99",
+            "year":"990"
+        },
+        "text":"Additional features available such as more detailed metrics. Recommended for business owners."
+    }
+]

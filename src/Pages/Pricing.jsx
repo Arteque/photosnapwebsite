@@ -86,7 +86,7 @@ const Pricing = () => {
               <div
                 className={`${
                   i % 2 === 1
-                    ? "bg-black-100 text-white-100 lg:scale-y-[1.1]"
+                    ? "bg-black-100 text-white-100 lg:scale-y-[1.1] topgradient"
                     : "text-black-100 bg-gray-100"
                 }
            text-center px-[37px] py-[48px] 

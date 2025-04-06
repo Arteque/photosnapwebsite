@@ -6,6 +6,7 @@ const Card = ({
   imgurlmobile,
   children,
   classname,
+  ...props
 }) => {
   return bgmedia ? (
     <div
@@ -15,9 +16,8 @@ const Card = ({
     <div
       className={`${
         dark ? "bg-black-100" : "bg-white-100"
-      } px-[24px] py-[92px] flex flex-col justify-center ${
-        classname ? classname : null
-      }`}
+      } py-[96px] flex flex-column items-center ${classname}`}
+      {...props}
     >
       {children}
     </div>

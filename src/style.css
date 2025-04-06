@@ -6,7 +6,8 @@
     --color-black-100: #000;
     --color-gray-100:#dfdfdf;
     --color-white-100:#fff;
-    --color-accent-100:linear-gradient(#FFC593, #BC7198, #5A77FF);
+    --color-accent-100:#FFC593, #BC7198, #5A77FF;
+    
 }
 @layer components {
     .heading-xl {
@@ -176,11 +177,68 @@
         display: block;
        }
     }
-    figure.stories-hero figcaption {
+    
+    .smallgradient{
         position: relative;
-        padding: 0;
-        background: var(--color-black-100);
-        padding: 48px 30px;
+    }
+    .smallgradient::before{
+        content:"";
+        position: absolute;
+        inset-inline:0;
+        inset-block-start: 0;
+        height: 6px;
+        width: 50%;
+        background:linear-gradient(to bottom, var(--color-accent-100));
+        z-index: 10;
+    }
+    @media ( min-width:768px){
+        .smallgradient::before{
+            content: "";
+            position: absolute;
+            inset-inline: 0 auto;
+            inset-block: 50%;
+            height: 95%;
+            width: 6px;
+            background: linear-gradient(to bottom, var(--color-accent-100));
+            transform: translateY(-50%);
+        }  
+    }
+
+    .hovergradient{
+        position: relative;
+        top: 0;
+        cursor: pointer;
+        transition: all 0.3s; 
+    }
+    .hovergradient::after{
+        content:"";
+        position: absolute;
+        inset-inline:0;
+        inset-block-end: 0;
+        height: 6px;
+        background:linear-gradient(to bottom, var(--color-accent-100));
+        z-index: 10;
+        opacity: 0;
+        transition: all 0.3s;
+    }
+    .hovergradient:hover{
+        top: -24px;
+    }
+    .hovergradient:hover::after{
+        opacity: 1;
+    }
+
+    .topgradient{
+        position:relative;
+    }
+    .topgradient::after{
+        content:"";
+        position: absolute;
+        inset-inline:0;
+        inset-block-start: 0;
+        height: 6px;
+        background:linear-gradient(to bottom, var(--color-accent-100));
+        z-index: 10;
     }
     
 }

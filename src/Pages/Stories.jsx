@@ -21,7 +21,7 @@ const Stories = () => {
           imgtext='The dissected plateau area, while not actually made up of geological mountains, is popularly called "mountains," especially in eastern Kentucky and West Virginia, and while the ridges are not high, the terrain is extremely rugged.'
           classname="[&_picture_img]:min-h-[317px] [&_figcaption]:relative [&_figcaption]:bg-black-100 [&_figcaption]:py-[48px] [&_figcaption]:px-[28px] [&_figcaption_h2]:text-[32px] [&_figcaption_h2]:mb-[56px]
             [&_figcaption_p.date-autor-container]:border-[0px] [&_figcaption_p.date-autor-container]:pb-[16px] [&_figcaption_p.date-autor-container]:mb-[0]
-            md:[&_picture_img]:min-h-[650px] md:[&_figcaption]:absolute md:[&_figcaption]:bg-transparent md:[&_figcaption]:bg-linear-[to_top,#000000a8_20%,#00000000_100%] md:[&_figcaption]:px-[39px] md:[&_figcaption]:py-[139px]
+            md:[&_picture_img]:min-h-[650px] md:[&_figcaption]:absolute md:[&_figcaption]:bg-transparent md:[&_figcaption]:bg-linear-[to_top,#000000a8_20%,#00000000_100%] md:[&_figcaption]:px-[15svw] md:[&_figcaption]:py-[10%]
           "
         />
       </section>
@@ -46,6 +46,7 @@ const Stories = () => {
                     : "md:col-start-3 md:col-end-[-1]"
                 }
                   lg:col-start-auto lg:col-span-3
+                  hovergradient
                   `}
               />
             ))}

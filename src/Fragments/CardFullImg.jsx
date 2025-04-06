@@ -22,8 +22,8 @@ const CardFullImg = ({
       className={`relative w-full ${classname}`}
     >
       <picture className="w-full h-full block object-contain">
-        <source sizes="min-width: 1100px" srcset={imgdesktop} />
-        <source sizes="min-width: 768" srcset={imgtablet} />
+        <source sizes="min-width: 1100px" srcSet={imgdesktop} />
+        <source sizes="min-width: 768" srcSet={imgtablet} />
         <img
           src={imgmobile}
           alt={imgalt}

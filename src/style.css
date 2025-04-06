@@ -17,6 +17,11 @@
         text-transform: uppercase;
         margin-block-end: 1rem;
     }
+    @media (min-width:768px){
+        .heading-xl {
+            font-size: 40px;
+        }
+    }
     .heading-lg {
         font-size: 24px;
         line-height: 25px;
@@ -98,6 +103,84 @@
             opacity: 0;
             pointer-events: none;
         }
+    }
+    .pricing_table{
+        width:min(731px, 100% - 40px);
+        margin: 0 auto;
+    }
+    
+    .pricing_table th{
+        font-size: 12px;
+        letter-spacing: 2px;
+        color: var(--color-black-100);
+        text-align: left;
+    }
+    .pricing_table th, .pricing_table td{
+        min-width: 71px;
+    }
+    .pricing_table thead th{
+        border-block-end: 1px solid;
+        border-block-end-color: var(--color-black-100);
+        padding-block-end: 24px;
+        width: fit-content;
+    }
+    .pricing_table tbody tr{
+        border-block-end: 1px solid;
+        border-block-end-color: var(--color-gray-100);
+    }
+    .pricing_table tbody th{
+        padding-block-start: 24px;
+        padding-block-end: 16px;
+        width: auto;
+    }
+    .pricing_table tbody img{
+        margin-inline-start: 13px;
+        width: auto;
+        display: block;
+    }
+    @media ( max-width:768px ){
+        .pricing_table{
+            position:relative;
+        }
+        .pricing_table tr{
+            border-collapse: collapse;
+       }
+        .pricing_table caption{
+            display: none;
+        }
+       .pricing_table th:not(tbody th):not(thead th:nth-of-type(1)){
+         display:none
+       }
+       .pricing_table tbody th{
+        display: block;
+       }
+       .pricing_table tbody img{
+        margin-inline:unset;
+       }
+       .pricing_table td{
+        display: inline-block;
+        width: 30%;
+        height: 48px;
+        padding-block-end: 58px;
+       }
+       .pricing_table td::before{
+        content: attr(data-cell);
+        margin-block-end: 8px;
+        font-size: 10px;
+        letter-spacing: 1.65px;
+        color: var(--color-black-100);
+        font-weight: 700;
+        opacity: 0.5;
+        text-transform: uppercase;
+        position: relative;
+        display: block;
+       }
+    }
+    figure.stories-hero figcaption {
+        position: relative;
+        padding: 0;
+        background: var(--color-black-100);
+        padding: 48px 30px;
     }
     
 }

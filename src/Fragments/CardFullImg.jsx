@@ -1,5 +1,6 @@
 import Button from "./Button";
 import Container from "./Container"
+import Paragraph from "./Paragraph";
 
 const CardFullImg = ({
   imgdesktop,
@@ -39,18 +40,18 @@ const CardFullImg = ({
               <h2 className={`heading-mid text-white-100 font-bold text-[18px] ${ishero ? 'text-[40px] tracking-[4.17px] leading-[48px] uppercase':null}`}>
                 {imgtitle}
               </h2>
-              {
-                imgdate || imgautor && (
-                  <p className="text-white-100 pb-[16px] mb-[16px] border-b-1 border-gray-500 text-[13px]">
-                    {imgdate ? <span className="date">{imgdate} </span> : null}
-                    <span className="autor">by {imgautor}</span>
-                  </p>
-                )
-              }
+              <p className="text-white-100 pb-[16px] mb-[16px] border-b-1 border-gray-500 text-[13px] date-autor-container">
+              {imgdate && (
+                    imgdate && <span className="date">{imgdate} </span>
+              )}
+              {imgautor && (
+                    imgautor && <span className="autor">by {imgautor}</span>
+              )}
+              </p>
               {imgtext ? (
-                <p className="text-white-100 pb-[16px] mb-[16px] text-[13px]">
+                <Paragraph classname="text-white-100 pb-[16px] text-[15px]">
                   {imgtext}
-                </p>
+                </Paragraph>
               ) : null}
               {
                 btntext && (

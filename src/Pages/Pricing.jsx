@@ -8,11 +8,11 @@ import Button from "../Fragments/Button";
 import Currency from "../Tools/Currency";
 
 import PlansData from "../Data/PLans.json";
-import Advantages from "../Data/Compare.json"
+import Advantages from "../Data/Compare.json";
 
 const Pricing = () => {
   const [plans, setPlans] = useState(PlansData);
-  const [compareData, setCompareData] = useState(Advantages)
+  const [compareData, setCompareData] = useState(Advantages);
   const [pricetype, setPriceType] = useState("month");
 
   const plantypeHandler = (e) => {
@@ -38,13 +38,13 @@ const Pricing = () => {
         title="Pricing"
         text="Create a your stories, Photosnap is a platform for photographers and visual storytellers. It’s the simple way to create and share your photos."
       />
-      <section className="my-[120px]">
+      <section className="mt-[120px]">
         <header>
           <Container>
-            <ul className="w-fit mx-auto flex gap-[10px] [&>li]:text-[18px] [&>li]:font-bold">
+            <ul className="w-fit mx-auto flex gap-[10px] [&>li]:text-[18px] [&>li]:font-bold [&>li]:transition-all [&>li]:delay-100 [&>li]:duration-500">
               <li
                 className={
-                  pricetype == "year" ? "text-gray-100" : "text-black-100"
+                  pricetype == "year" ? "text-gray-100 scale-[0.7]" : "text-black-100"
                 }
               >
                 Month
@@ -67,7 +67,7 @@ const Pricing = () => {
               </li>
               <li
                 className={
-                  pricetype == "month" ? "text-gray-100" : "text-black-100"
+                  pricetype == "month" ? "text-gray-100 scale-[0.7]" : "text-black-100"
                 }
               >
                 Year
@@ -145,47 +145,50 @@ const Pricing = () => {
             ))}
         </Container>
       </section>
-      <section id="compare">
-        <header>
-          <h2>Compare</h2>
-        </header>
+      <section id="compare" className=" my-[160px]">
         <Container>
-          <table className="text-[12px] font-bold tracking-[2px] w-[100%] max-w-[552px] mx-auto uppercase [&_tr]:h-[63px] [&_img]:mx-auto [&_td]:min-w-[100px] mb-[64px] border-collapse">
-            <thead className="">
-              <tr className="border-b-2 border-black-100">
-                <th className="pl-2 block w-100%">
-                  The features
-                </th>
-                <th  className="text-center w-0 hidden md:visible">
-                  Basic
-                </th>
-                <th  className="text-center w-0 hidden md:visible">
-                  Pro
-                </th>
-                <th  className="text-center w- 0 hidden md:visible">
-                  Business
-                </th>
+          <table className="pricing_table">
+            <caption className="heading-xl">Compare</caption>
+            <thead>
+              <tr>
+                <th>The features</th>
+                <th>Basic</th>
+                <th>Pro</th>
+                <th>Business</th>
               </tr>
             </thead>
             <tbody>
-              {compareData && compareData.length > 0 &&(
+              {compareData &&
+                compareData.length > 0 &&
                 compareData.map((data, index) => (
-                  <tr key={index} className="border-b-1 border-gray-100" >
-                    <th className="pl-2" data-cell="the features">
-                      {data.title}
-                    </th>
+                  <tr key={index}>
+                    <th data-cell="the features">{data.title}</th>
                     <td data-cell="Basic">
-                      {data.available.basic && <img src="/pricing/desktop/check.svg" alt={`${data.title} basic check`} />}
+                      {data.available.basic && (
+                        <img
+                          src="/pricing/desktop/check.svg"
+                          alt={`${data.title} basic check`}
+                        />
+                      )}
                     </td>
                     <td data-cell="Pro">
-                      {data.available.pro && <img src="/pricing/desktop/check.svg" alt={`${data.title} basic check`} />}
+                      {data.available.pro && (
+                        <img
+                          src="/pricing/desktop/check.svg"
+                          alt={`${data.title} basic check`}
+                        />
+                      )}
                     </td>
                     <td data-cell="Business">
-                      {data.available.business && <img src="/pricing/desktop/check.svg" alt={`${data.title} basic check`} />}
+                      {data.available.business && (
+                        <img
+                          src="/pricing/desktop/check.svg"
+                          alt={`${data.title} basic check`}
+                        />
+                      )}
                     </td>
                   </tr>
-                ))
-              )}
+                ))}
             </tbody>
           </table>
         </Container>

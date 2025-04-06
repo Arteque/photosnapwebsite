@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import Button from "../Fragments/Button";
 import Card from "../Fragments/Card";
@@ -15,6 +15,10 @@ const Start = () => {
   const [stories, setstories] = useState(Stories);
   const [features, setFeatures] = useState(Features);
   const maxData = 4;
+
+  useEffect(() => {
+    console.log(stories)
+  },[])
 
   return (
     <div>
@@ -118,6 +122,7 @@ const Start = () => {
           stories.length > 0 &&
           stories.map(
             (story, index) =>
+              
               index < maxData && (
                 <CardFullImg
                   imgmobile={story.imgs.mobile}

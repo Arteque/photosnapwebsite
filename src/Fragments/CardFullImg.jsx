@@ -15,6 +15,7 @@ const CardFullImg = ({
   imgautor,
   classname,
   ishero,
+  to,
   ...props
 }) => {
   return (
@@ -59,6 +60,7 @@ const CardFullImg = ({
                     btntype="underline"
                     dark={true}
                     btntext={btntext}
+                    to={to}
                     {...props.Link}
                     classname="justify-between"
                   />
